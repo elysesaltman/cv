@@ -86,3 +86,28 @@ svg {
 svg:hover {
   fill: #ecb365;
 }
+
+
+.box {
+}
+
+/* .box h1 {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+} */
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.box h1::after {
+  content: "";
+  width: 5px;
+  height: 30px;
+  background: #ec7fff;
+  display: inline-block;
+  animation: cursor-blink 1.5s steps(2) infinite;
+}
