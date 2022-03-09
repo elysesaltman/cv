@@ -8,17 +8,17 @@
 } */
 body {
   background-image: linear-gradient(to bottom right, #041c32, #392042 90%);
-  /* background-size: 400% 400%; */
-  /* animation: gradient 20s ease infinite; */
   height: 100vh;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #d1d1d1;
+  display: flex;
+  justify-content: center;
 }
 
-div {
+div.container {
   padding-top: 100px;
   padding-right: 30px;
   padding-bottom: 50px;
@@ -61,10 +61,6 @@ a:visited {
   text-decoration: none;
 }
 
-h1 {
-  color: white;
-}
-
 a:hover {
   color: white;
 }
@@ -80,34 +76,70 @@ b {
 svg {
   width: 24px;
   height: 24px;
-  fill: white;
+  fill: #ffffff;
 }
 
 svg:hover {
   fill: #ecb365;
 }
 
-
-.box {
-}
+.box {}
 
 /* .box h1 {
   display: flex;
   align-items: center;
   gap: 2px;
 } */
-
 @keyframes cursor-blink {
   0% {
     opacity: 0;
   }
 }
 
-.box h1::after {
+/* .box h1::after {
   content: "";
   width: 5px;
-  height: 30px;
+  height: 32px;
   background: #ec7fff;
   display: inline-block;
   animation: cursor-blink 1.5s steps(2) infinite;
+} */
+
+
+div.box1 {
+  width: 220px;
+}
+
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  padding: 10px;
+  animation:
+    typing 1.5s steps(12, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange
+  }
 }
